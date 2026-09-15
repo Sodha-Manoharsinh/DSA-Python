@@ -8,9 +8,7 @@ def fun(left,right,arr):
     if left > right:
         return 
 
-    temp = arr[left]
-    arr[left] = arr[right]
-    arr[right] = temp
+    arr[left],arr[right] = arr[right],arr[left]
 
     fun(left+1,right-1,arr)
 
